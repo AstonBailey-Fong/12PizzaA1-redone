@@ -18,6 +18,7 @@
         Public top2 As Boolean
         Public top3 As Boolean
         Public top4 As Boolean
+        Public Pflav As String    'Flavour of the pizza
     End Class
 
     Dim students(9) As STUDENT
@@ -60,6 +61,7 @@
         students(0).street = "25 Taylor St"
         students(0).suburb = "Glebe"
         students(0).pizzaBase = "Fat"
+        students(0).Pflav = "Peperoni"
         students(0).top1 = True
         students(0).top2 = False
         students(0).top3 = True
@@ -75,6 +77,7 @@
         students(1).street = "20 Taylor St"
         students(1).suburb = "Glebe"
         students(1).pizzaBase = "Thin"
+        students(1).Pflav = "TATFTUAE"
         students(1).top1 = False
         students(1).top2 = True
         students(1).top3 = True
@@ -90,6 +93,7 @@
         students(2).street = "19 Taylor St"
         students(2).suburb = "Glebe"
         students(2).pizzaBase = "Thin"
+        students(2).Pflav = "Hawaiian"
         students(2).top1 = False
         students(2).top2 = True
         students(2).top3 = True
@@ -105,6 +109,7 @@
         students(3).street = "20 Taylor St"
         students(3).suburb = "Glebe"
         students(3).pizzaBase = "Thin"
+        students(3).Pflav = "Meatlovers"
         students(3).top1 = False
         students(3).top2 = True
         students(3).top3 = True
@@ -116,6 +121,52 @@
         CalcTotalPrice()
     End Sub
     Private Sub btnAddStud_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        If txtFirstName.Text = "" Then ' First Name Check
+            MsgBox("Please enter a First Name", MsgBoxStyle.Exclamation, "First Name Check")
+            txtFirstName.Focus()
+            Exit Sub
+        End If
+        If txtLastName.Text = "" Then 'Last Name Check
+            MsgBox("Please enter a Last Name", MsgBoxStyle.Exclamation, "Last Name Check")
+            txtLastName.Focus()
+            Exit Sub
+        End If
+        If txtPhone.Text = "" Then 'Phone no. Check
+            MsgBox("Ensure your phone number has 10 digits", MsgBoxStyle.Exclamation, "Phone # Check")
+            txtPhone.Focus()
+            Exit Sub
+        End If
+        Dim spaceCount As Integer
+        spaceCount = 0
+        For Each c As Char In txtPhone.Text
+            If c = " " Then
+                spaceCount += 1
+            End If
+        Next
+        If spaceCount > 0 Then
+            MsgBox("There are " & spaceCount & " spaces in the phone number. Please ensure there are 10 numbers.", MsgBoxStyle.Exclamation, "Phone # Check")
+        End If
+        If txtStreet.Text = "" Then 'Street Check
+            MsgBox("Please enter a Number and Street", MsgBoxStyle.Exclamation, "Street Name Check")
+            txtStreet.Focus()
+            Exit Sub
+        End If
+        If txtSuburb.Text = "" Then 'Suburb Check
+            MsgBox("Please enter a Suburb", MsgBoxStyle.Exclamation, "Suburb Name Check")
+            txtSuburb.Focus()
+            Exit Sub
+        End If
+        If Not IsNumeric(txtPostcode.Text) Then 'Postcode Check
+            MsgBox("Please ensure that postcode is numeric", MsgBoxStyle.Exclamation, "Postcode Check")
+            txtPostcode.Focus()
+            Exit Sub
+        Else
+            If CInt(txtPostcode.Text) < 999 Or CInt(txtPostcode.Text) > 9999 Then
+                MsgBox("Please enter a 4 digit postcode", MsgBoxStyle.Exclamation, "Postcode Check")
+                txtPostcode.Focus()
+            End If
+        End If
+
         students(studentCount).studID = studentCount + 1 'allocate the new student ID to an incremented value
         'place text from text boxes into the array - first students(0), then students(1), students(2) etc
         students(studentCount).firstName = txtFirstName.Text
@@ -125,6 +176,7 @@
         students(studentCount).suburb = txtSuburb.Text
         students(studentCount).quantity = txtQuantity.Text
         students(studentCount).deliveryDate = dteDelivery.Text & " " & cboHour.Text & ":" & cboMinute.Text
+        students(studentCount).Pflav = CBOPFlav.Text
         studentCount += 1
         'return text boxes to blank ready for next entry
         txtFirstName.Text = ""
@@ -155,7 +207,7 @@
                               UCase(students(i).lastName) & "-" & students(i).phoneNo & "- a" &
                               students(i).street & "-" & students(i).suburb & "-" &
                               students(i).postcode & "-q" & students(i).quantity & "-" &
-                              students(i).pizzaBase & "-A " & students(i).top1 & ": O " &
+                              students(i).pizzaBase & students(i).Pflav & "-A " & students(i).top1 & ": O " &
                               students(i).top2 & ": C " & students(i).top3 & ": P " &
                               students(i).top4 & ": Del " & students(i).deliveryDate)
         Next
@@ -201,7 +253,7 @@
         txtTotalPrice.Text = FormatCurrency(toppedPrice * CInt(txtQuantity.Text))
     End Sub
 
-    Private Sub txtQuantity_TextChanged(sender As Object, e As EventArgs) Handles txtQuantity.TextChanged
+    Private Sub txtQuantity_TextChanged(sender As Object, e As EventArgs) Handles txtQuantity.Leave
         CalcTotalPrice()
     End Sub
 
@@ -232,6 +284,26 @@
     End Sub
 
     Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+
+    End Sub
+
+    Private Sub CheckBox5_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox5.CheckedChanged
+
+    End Sub
+
+    Private Sub txtToppedPrice_TextChanged(sender As Object, e As EventArgs) Handles txtToppedPrice.TextChanged
+
+    End Sub
+
+    Private Sub Label15_Click(sender As Object, e As EventArgs) Handles Label15.Click
+
+    End Sub
+
+    Private Sub Label11_Click(sender As Object, e As EventArgs) Handles Label11.Click
+
+    End Sub
+
+    Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
 
     End Sub
 End Class
