@@ -48,7 +48,7 @@
         End Sub
     End Class
 
-    Dim students(9) As STUDENT
+    ReadOnly students(9) As STUDENT
     Dim studentCount As Integer = 0
     Dim basePrice As Single
     Dim top1price As Single
@@ -86,11 +86,11 @@
 
         'set the student count to the number of students which have been entered
         studentCount = 4
-        displayList()
+        DisplayList()
         CalcToppedPrice()
         CalcTotalPrice()
     End Sub
-    Private Sub btnAddStud_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+    Private Sub BtnAddStud_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         If txtFirstName.Text = "" Then ' First Name Check
             MsgBox("Please enter a First Name", MsgBoxStyle.Exclamation, "First Name Check")
             txtFirstName.Focus()
@@ -214,9 +214,9 @@
         chkTop3.Checked = False
         chkTop4.Checked = False
         CBOPFlav.Text = ""
-        displayList()
+        DisplayList()
     End Sub
-    Private Sub displayList()
+    Private Sub DisplayList()
         'clear the list box as it keeps the earlier loop
         txtStList.Items.Clear()
         'loop through the array to print all rows
@@ -248,22 +248,22 @@
         txtToppedPrice.Text = FormatCurrency(toppedPrice)
     End Sub
 
-    Private Sub chkTop1_CheckedChanged(sender As Object, e As EventArgs) Handles chkTop1.CheckedChanged
+    Private Sub ChkTop1_CheckedChanged(sender As Object, e As EventArgs) Handles chkTop1.CheckedChanged
         CalcToppedPrice()
         CalcTotalPrice()
     End Sub
 
-    Private Sub chkTop2_CheckedChanged(sender As Object, e As EventArgs) Handles chkTop2.CheckedChanged
+    Private Sub ChkTop2_CheckedChanged(sender As Object, e As EventArgs) Handles chkTop2.CheckedChanged
         CalcToppedPrice()
         CalcTotalPrice()
     End Sub
 
-    Private Sub chkTop3_CheckedChanged(sender As Object, e As EventArgs) Handles chkTop3.CheckedChanged
+    Private Sub ChkTop3_CheckedChanged(sender As Object, e As EventArgs) Handles chkTop3.CheckedChanged
         CalcToppedPrice()
         CalcTotalPrice()
     End Sub
 
-    Private Sub chkTop4_CheckedChanged(sender As Object, e As EventArgs) Handles chkTop4.CheckedChanged
+    Private Sub ChkTop4_CheckedChanged(sender As Object, e As EventArgs) Handles chkTop4.CheckedChanged
         CalcToppedPrice()
         CalcTotalPrice()
     End Sub
@@ -271,11 +271,11 @@
         txtTotalPrice.Text = FormatCurrency(toppedPrice * CInt(txtQuantity.Text))
     End Sub
 
-    Private Sub txtQuantity_TextChanged(sender As Object, e As EventArgs) Handles txtQuantity.Leave
+    Private Sub TxtQuantity_TextChanged(sender As Object, e As EventArgs) Handles txtQuantity.Leave
         CalcTotalPrice()
     End Sub
 
-    Private Sub txtBasePrice_TextChanged(sender As Object, e As EventArgs) Handles txtBasePrice.TextChanged
+    Private Sub TxtBasePrice_TextChanged(sender As Object, e As EventArgs) Handles txtBasePrice.TextChanged
 
     End Sub
 
@@ -291,7 +291,7 @@
 
     End Sub
 
-    Private Sub txtToppedPrice_TextChanged(sender As Object, e As EventArgs) Handles txtToppedPrice.TextChanged
+    Private Sub TxtToppedPrice_TextChanged(sender As Object, e As EventArgs) Handles txtToppedPrice.TextChanged
 
     End Sub
 

@@ -330,13 +330,12 @@ Partial Class Pizza105
         '
         Me.dteDelivery.Location = New System.Drawing.Point(417, 63)
         Me.dteDelivery.Margin = New System.Windows.Forms.Padding(4)
-        ' Me.dteDelivery.MaxDate = New Date(2373, 12, 22, 0, 0, 0, 0)
-        Me.dteDelivery.MaxDate = Date.Now.AddMonths(1)
-        'Me.dteDelivery.MinDate = New Date(2021, 11, 21, 0, 0, 0, 0)
-        Me.dteDelivery.MinDate = Date.Now
+        Me.dteDelivery.MaxDate = New Date(2021, 12, 21, 15, 3, 53, 204)
+        Me.dteDelivery.MinDate = New Date(2021, 11, 21, 15, 3, 53, 204)
         Me.dteDelivery.Name = "dteDelivery"
         Me.dteDelivery.Size = New System.Drawing.Size(266, 22)
         Me.dteDelivery.TabIndex = 16
+        Me.dteDelivery.Value = New Date(2021, 11, 21, 15, 3, 53, 204)
         '
         'Label11
         '
@@ -530,7 +529,7 @@ Partial Class Pizza105
         Me.Label17.TabIndex = 40
         Me.Label17.Text = "Pizza Flavour"
         '
-        'Pizza104
+        'Pizza105
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -581,8 +580,8 @@ Partial Class Pizza105
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtFirstName)
         Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.Name = "Pizza104"
-        Me.Text = "v1.04 Pizza ordering app"
+        Me.Name = "Pizza105"
+        Me.Text = "v1.05 Pizza ordering app"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
