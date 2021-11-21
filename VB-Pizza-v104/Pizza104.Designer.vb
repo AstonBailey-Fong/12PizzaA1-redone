@@ -286,6 +286,7 @@ Partial Class Pizza104
         'cboHour
         '
         Me.cboHour.AutoCompleteCustomSource.AddRange(New String() {"10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"})
+        Me.cboHour.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboHour.FormattingEnabled = True
         Me.cboHour.Items.AddRange(New Object() {"10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22"})
         Me.cboHour.Location = New System.Drawing.Point(417, 114)
@@ -293,10 +294,10 @@ Partial Class Pizza104
         Me.cboHour.Name = "cboHour"
         Me.cboHour.Size = New System.Drawing.Size(90, 24)
         Me.cboHour.TabIndex = 17
-        Me.cboHour.Text = "01"
         '
         'cboMinute
         '
+        Me.cboMinute.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboMinute.FormattingEnabled = True
         Me.cboMinute.Items.AddRange(New Object() {"00", "15", "30", "45"})
         Me.cboMinute.Location = New System.Drawing.Point(583, 114)
@@ -304,7 +305,6 @@ Partial Class Pizza104
         Me.cboMinute.Name = "cboMinute"
         Me.cboMinute.Size = New System.Drawing.Size(100, 24)
         Me.cboMinute.TabIndex = 18
-        Me.cboMinute.Text = "00"
         '
         'Label9
         '
