@@ -180,6 +180,7 @@
                                              txtPostcode.Text, txtQuantity.Text, txtPhone.Text, txtStreet.Text, txtSuburb.Text, cboHour.Text, cboMinute.Text,
                                              selectedType, CheckBox5.Checked, chkTop1.Checked, chkTop2.Checked, chkTop3.Checked, chkTop4.Checked, CBOPFlav.Text)
         studentCount += 1
+
         'return text boxes to blank ready for next entry
         txtFirstName.Text = ""
         txtLastName.Text = ""
