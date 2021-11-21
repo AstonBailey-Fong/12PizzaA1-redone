@@ -152,12 +152,26 @@
             cboHour.Focus()
             Exit Sub
         End If
-        If cboMinute.Text = "" Then
+        If cboMinute.Text = "" Then ' Minute Check
             MsgBox("Please enter in an minute from the dropdown box", MsgBoxStyle.Exclamation, "Time Check")
             cboMinute.Focus()
             Exit Sub
         End If
-
+        If radFat.Checked = False And radCrispy.Checked = False And radThin.Checked = False Then 'Base Check
+            MsgBox("Please select a base", MsgBoxStyle.Exclamation, "Base Check")
+            radThin.Focus()
+            Exit Sub
+        End If
+        If chkTop1.Checked = False And chkTop2.Checked = False And chkTop3.Checked = False And chkTop4.Checked = False Then 'Topping Check
+            MsgBox("Please select a topping", MsgBoxStyle.Exclamation, "Topping Check")
+            chkTop1.Focus()
+            Exit Sub
+        End If
+        If CBOPFlav.Text = "" Then 'Flavour Check
+            MsgBox("Please select a flavour", MsgBoxStyle.Exclamation, "Flavour Check")
+            CBOPFlav.Focus()
+            Exit Sub
+        End If
         ' Use a SELECT structure to pick out selected crust type
         ' This works because we know only one radio button can be
         ' selected at once. Consider making one of them selected
@@ -199,6 +213,7 @@
         chkTop2.Checked = False
         chkTop3.Checked = False
         chkTop4.Checked = False
+        CBOPFlav.Text = ""
         displayList()
     End Sub
     Private Sub displayList()
