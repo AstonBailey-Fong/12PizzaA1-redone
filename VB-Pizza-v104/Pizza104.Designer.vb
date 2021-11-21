@@ -128,7 +128,7 @@ Partial Class Pizza104
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(187, 97)
+        Me.Label5.Location = New System.Drawing.Point(48, 139)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(67, 17)
@@ -137,7 +137,7 @@ Partial Class Pizza104
         '
         'txtPostcode
         '
-        Me.txtPostcode.Location = New System.Drawing.Point(190, 114)
+        Me.txtPostcode.Location = New System.Drawing.Point(48, 158)
         Me.txtPostcode.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPostcode.Name = "txtPostcode"
         Me.txtPostcode.Size = New System.Drawing.Size(132, 22)
@@ -330,6 +330,10 @@ Partial Class Pizza104
         '
         Me.dteDelivery.Location = New System.Drawing.Point(417, 63)
         Me.dteDelivery.Margin = New System.Windows.Forms.Padding(4)
+        ' Me.dteDelivery.MaxDate = New Date(2373, 12, 22, 0, 0, 0, 0)
+        Me.dteDelivery.MaxDate = Date.Now.AddMonths(1)
+        'Me.dteDelivery.MinDate = New Date(2021, 11, 21, 0, 0, 0, 0)
+        Me.dteDelivery.MinDate = Date.Now
         Me.dteDelivery.Name = "dteDelivery"
         Me.dteDelivery.Size = New System.Drawing.Size(266, 22)
         Me.dteDelivery.TabIndex = 16
@@ -355,7 +359,7 @@ Partial Class Pizza104
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(48, 139)
+        Me.Label12.Location = New System.Drawing.Point(190, 90)
         Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(101, 17)
@@ -364,7 +368,7 @@ Partial Class Pizza104
         '
         'txtStreet
         '
-        Me.txtStreet.Location = New System.Drawing.Point(48, 158)
+        Me.txtStreet.Location = New System.Drawing.Point(190, 109)
         Me.txtStreet.Margin = New System.Windows.Forms.Padding(4)
         Me.txtStreet.Name = "txtStreet"
         Me.txtStreet.Size = New System.Drawing.Size(132, 22)
