@@ -19,6 +19,33 @@
         Public top3 As Boolean
         Public top4 As Boolean
         Public Pflav As String    'Flavour of the pizza
+
+        ' The constructor method called when an object is initialised
+        ' This is similar to Python's __init__
+        Public Sub New(studId As Int16, firstName As String, lastName As String, deliveryDate As Date,
+                       postcode As String, quantity As Byte, phoneNo As String, street As String,
+                       suburb As String, hour As Byte, minute As Byte, pizzaBase As String,
+                       paid As Boolean, top1 As Boolean, top2 As Boolean, top3 As Boolean,
+                       top4 As Boolean, Pflav As String)
+            Me.studID = studId
+            Me.firstName = firstName
+            Me.lastName = lastName
+            Me.deliveryDate = deliveryDate
+            Me.postcode = postcode
+            Me.quantity = quantity
+            Me.phoneNo = phoneNo
+            Me.street = street
+            Me.suburb = suburb
+            Me.hour = hour
+            Me.minute = minute
+            Me.pizzaBase = pizzaBase
+            Me.paid = paid
+            Me.top1 = top1
+            Me.top2 = top2
+            Me.top3 = top3
+            Me.top4 = top4
+            Me.Pflav = Pflav
+        End Sub
     End Class
 
     Dim students(9) As STUDENT
@@ -31,10 +58,6 @@
     Dim toppedPrice As Single
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'allocate memory
-        For i = 0 To 9
-            students(i) = New STUDENT
-        Next
         'load default prices
         basePrice = 10
         top1price = 0.3
@@ -50,70 +73,17 @@
         txtTop4.Text = FormatCurrency(top4price)
 
         'load 4 test records
-        students(0).studID = 1
-        students(0).firstName = "Hungry"
-        students(0).lastName = "Harry"
-        students(0).deliveryDate = "28/10/21 6:30:00 PM"
-        students(0).postcode = "2037"
-        students(0).quantity = 2
-        students(0).phoneNo = "0243-232-232"
-        students(0).paid = True
-        students(0).street = "25 Taylor St"
-        students(0).suburb = "Glebe"
-        students(0).pizzaBase = "Fat"
-        students(0).Pflav = "Peperoni"
-        students(0).top1 = True
-        students(0).top2 = False
-        students(0).top3 = True
-        students(0).top4 = True
-        students(1).studID = 2
-        students(1).firstName = "Bart"
-        students(1).lastName = "Simpson"
-        students(1).deliveryDate = "29/10/21 8:45:00 PM"
-        students(1).postcode = "2037"
-        students(1).quantity = 3
-        students(1).phoneNo = "0243-444-555"
-        students(1).paid = True
-        students(1).street = "20 Taylor St"
-        students(1).suburb = "Glebe"
-        students(1).pizzaBase = "Thin"
-        students(1).Pflav = "TATFTUAE"
-        students(1).top1 = False
-        students(1).top2 = True
-        students(1).top3 = True
-        students(1).top4 = True
-        students(2).studID = 3
-        students(2).firstName = "Homer"
-        students(2).lastName = "Simpson"
-        students(2).deliveryDate = "29/10/21 7:30:00 PM"
-        students(2).postcode = "2037"
-        students(2).quantity = 4
-        students(2).phoneNo = "0243-666-777"
-        students(2).paid = False
-        students(2).street = "19 Taylor St"
-        students(2).suburb = "Glebe"
-        students(2).pizzaBase = "Thin"
-        students(2).Pflav = "Hawaiian"
-        students(2).top1 = False
-        students(2).top2 = True
-        students(2).top3 = True
-        students(2).top4 = True
-        students(3).studID = 4
-        students(3).firstName = "Lisa"
-        students(3).lastName = "Simpson"
-        students(3).deliveryDate = "29/10/21 6:00:00 PM"
-        students(3).postcode = "2037"
-        students(3).quantity = 4
-        students(3).phoneNo = "0243-666-777"
-        students(3).paid = False
-        students(3).street = "20 Taylor St"
-        students(3).suburb = "Glebe"
-        students(3).pizzaBase = "Thin"
-        students(3).Pflav = "Meatlovers"
-        students(3).top1 = False
-        students(3).top2 = True
-        students(3).top3 = True
-        students(3).top4 = True
+        ' The order of values passed is the same as the order in the
+        ' initialisation method definition (lines 25-29)
+        students(0) = New STUDENT(1, "Hungry", "Harry", "28/10/21 6:30:00 PM", "2037", 2, "0243-232-232",
+                                  "25 Taylor St", "Glebe", 6, 30, "Fat", True, True, False, True, True, "Pepperoni")
+        students(1) = New STUDENT(2, "Bart", "Simpson", "29/10/21 8:45:00 PM", "2037", 3, "0243-444-555",
+                                  "20 Taylor St", "Glebe", 8, 45, "Thin", True, False, True, True, True, "TATFTUAE")
+        students(2) = New STUDENT(3, "Homer", "Simpson", "29/10/21 7:30:00 PM", "2037", 4, "0243-666-777",
+                                  "19 Taylor St", "Glebe", 7, 30, "Thin", False, False, True, True, True, "Hawaiian")
+        students(3) = New STUDENT(4, "Lisa", "Simpson", "29/10/21 6:00:00 PM", "2037", 4, "0243-666-777",
+                                  "20 Taylor St", "Glebe", 6, 0, "Thin", False, False, True, True, True, "Meatlovers")
+
         'set the student count to the number of students which have been entered
         studentCount = 4
         displayList()
@@ -167,17 +137,29 @@
             End If
         End If
 
-        students(studentCount).studID = studentCount + 1 'allocate the new student ID to an incremented value
-        'place text from text boxes into the array - first students(0), then students(1), students(2) etc
-        students(studentCount).firstName = txtFirstName.Text
-        students(studentCount).lastName = txtLastName.Text
-        students(studentCount).phoneNo = txtPhone.Text
-        students(studentCount).street = txtStreet.Text
-        students(studentCount).suburb = txtSuburb.Text
-        students(studentCount).quantity = txtQuantity.Text
-        students(studentCount).deliveryDate = dteDelivery.Text & " " & cboHour.Text & ":" & cboMinute.Text
-        students(studentCount).Pflav = CBOPFlav.Text
+        ' Use a SELECT structure to pick out selected crust type
+        ' This works because we know only one radio button can be
+        ' selected at once. Consider making one of them selected
+        ' by default, as if one isn't selected, this block of code
+        ' here will cause an error
+        Dim selectedType = ""
+
+        Select Case True
+            Case radThin.Checked
+                selectedType = "Thin"
+            Case radCrispy.Checked
+                selectedType = "Crispy"
+            Case radFat.Checked
+                selectedType = "Fat"
+        End Select
+
+        ' Create a new element and fill it in with our details
+        ' Note: paid checkbox needs to be renamed from the default CheckBox5
+        students(studentCount) = New STUDENT(studentCount + 1, txtFirstName.Text, txtLastName.Text, dteDelivery.Text & " " & cboHour.Text & ":" & cboMinute.Text,
+                                             txtPostcode.Text, txtQuantity.Text, txtPhone.Text, txtStreet.Text, txtSuburb.Text, cboHour.Text, cboMinute.Text,
+                                             selectedType, CheckBox5.Checked, chkTop1.Checked, chkTop2.Checked, chkTop3.Checked, chkTop4.Checked, CBOPFlav.Text)
         studentCount += 1
+
         'return text boxes to blank ready for next entry
         txtFirstName.Text = ""
         txtLastName.Text = ""
@@ -255,24 +237,6 @@
 
     Private Sub txtQuantity_TextChanged(sender As Object, e As EventArgs) Handles txtQuantity.Leave
         CalcTotalPrice()
-    End Sub
-
-    Private Sub radThin_CheckedChanged(sender As Object, e As EventArgs) Handles radThin.CheckedChanged
-        If radThin.Checked Then
-            students(studentCount).pizzaBase = "Thin"
-        End If
-    End Sub
-
-    Private Sub radCrispy_CheckedChanged(sender As Object, e As EventArgs) Handles radCrispy.CheckedChanged
-        If radCrispy.Checked Then
-            students(studentCount).pizzaBase = "Crispy"
-        End If
-    End Sub
-
-    Private Sub radFat_CheckedChanged(sender As Object, e As EventArgs) Handles radFat.CheckedChanged
-        If radFat.Checked Then
-            students(studentCount).pizzaBase = "Fat"
-        End If
     End Sub
 
     Private Sub txtBasePrice_TextChanged(sender As Object, e As EventArgs) Handles txtBasePrice.TextChanged
