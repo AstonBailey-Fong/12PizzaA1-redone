@@ -81,6 +81,7 @@ Partial Class Pizza106
         Me.Top4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Flavour = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Paid = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Suburb = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.SuspendLayout()
         '
         'txtFirstName
@@ -160,7 +161,7 @@ Partial Class Pizza106
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(774, 228)
+        Me.Label6.Location = New System.Drawing.Point(837, 231)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(61, 17)
@@ -169,7 +170,7 @@ Partial Class Pizza106
         '
         'txtQuantity
         '
-        Me.txtQuantity.Location = New System.Drawing.Point(774, 246)
+        Me.txtQuantity.Location = New System.Drawing.Point(837, 249)
         Me.txtQuantity.Margin = New System.Windows.Forms.Padding(4)
         Me.txtQuantity.Name = "txtQuantity"
         Me.txtQuantity.Size = New System.Drawing.Size(132, 22)
@@ -199,7 +200,7 @@ Partial Class Pizza106
         'radThin
         '
         Me.radThin.AutoSize = True
-        Me.radThin.Location = New System.Drawing.Point(774, 48)
+        Me.radThin.Location = New System.Drawing.Point(837, 51)
         Me.radThin.Margin = New System.Windows.Forms.Padding(4)
         Me.radThin.Name = "radThin"
         Me.radThin.Size = New System.Drawing.Size(57, 21)
@@ -211,7 +212,7 @@ Partial Class Pizza106
         'radCrispy
         '
         Me.radCrispy.AutoSize = True
-        Me.radCrispy.Location = New System.Drawing.Point(774, 77)
+        Me.radCrispy.Location = New System.Drawing.Point(837, 80)
         Me.radCrispy.Margin = New System.Windows.Forms.Padding(4)
         Me.radCrispy.Name = "radCrispy"
         Me.radCrispy.Size = New System.Drawing.Size(68, 21)
@@ -223,7 +224,7 @@ Partial Class Pizza106
         'radFat
         '
         Me.radFat.AutoSize = True
-        Me.radFat.Location = New System.Drawing.Point(774, 105)
+        Me.radFat.Location = New System.Drawing.Point(837, 108)
         Me.radFat.Margin = New System.Windows.Forms.Padding(4)
         Me.radFat.Name = "radFat"
         Me.radFat.Size = New System.Drawing.Size(49, 21)
@@ -235,7 +236,7 @@ Partial Class Pizza106
         'chkTop1
         '
         Me.chkTop1.AutoSize = True
-        Me.chkTop1.Location = New System.Drawing.Point(920, 27)
+        Me.chkTop1.Location = New System.Drawing.Point(983, 30)
         Me.chkTop1.Margin = New System.Windows.Forms.Padding(4)
         Me.chkTop1.Name = "chkTop1"
         Me.chkTop1.Size = New System.Drawing.Size(95, 21)
@@ -246,7 +247,7 @@ Partial Class Pizza106
         'chkTop2
         '
         Me.chkTop2.AutoSize = True
-        Me.chkTop2.Location = New System.Drawing.Point(920, 53)
+        Me.chkTop2.Location = New System.Drawing.Point(983, 56)
         Me.chkTop2.Margin = New System.Windows.Forms.Padding(4)
         Me.chkTop2.Name = "chkTop2"
         Me.chkTop2.Size = New System.Drawing.Size(69, 21)
@@ -257,7 +258,7 @@ Partial Class Pizza106
         'chkTop3
         '
         Me.chkTop3.AutoSize = True
-        Me.chkTop3.Location = New System.Drawing.Point(920, 81)
+        Me.chkTop3.Location = New System.Drawing.Point(983, 84)
         Me.chkTop3.Margin = New System.Windows.Forms.Padding(4)
         Me.chkTop3.Name = "chkTop3"
         Me.chkTop3.Size = New System.Drawing.Size(96, 21)
@@ -268,7 +269,7 @@ Partial Class Pizza106
         'chkTop4
         '
         Me.chkTop4.AutoSize = True
-        Me.chkTop4.Location = New System.Drawing.Point(920, 107)
+        Me.chkTop4.Location = New System.Drawing.Point(983, 110)
         Me.chkTop4.Margin = New System.Windows.Forms.Padding(4)
         Me.chkTop4.Name = "chkTop4"
         Me.chkTop4.Size = New System.Drawing.Size(94, 21)
@@ -279,7 +280,7 @@ Partial Class Pizza106
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(768, 29)
+        Me.Label7.Location = New System.Drawing.Point(831, 32)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(78, 17)
@@ -398,7 +399,7 @@ Partial Class Pizza106
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(911, 185)
+        Me.Label14.Location = New System.Drawing.Point(974, 188)
         Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(114, 17)
@@ -407,7 +408,7 @@ Partial Class Pizza106
         '
         'txtBasePrice
         '
-        Me.txtBasePrice.Location = New System.Drawing.Point(914, 206)
+        Me.txtBasePrice.Location = New System.Drawing.Point(977, 209)
         Me.txtBasePrice.Margin = New System.Windows.Forms.Padding(4)
         Me.txtBasePrice.Name = "txtBasePrice"
         Me.txtBasePrice.ReadOnly = True
@@ -418,7 +419,7 @@ Partial Class Pizza106
         'txtTop1
         '
         Me.txtTop1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtTop1.Location = New System.Drawing.Point(864, 28)
+        Me.txtTop1.Location = New System.Drawing.Point(927, 31)
         Me.txtTop1.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTop1.Name = "txtTop1"
         Me.txtTop1.ReadOnly = True
@@ -430,7 +431,7 @@ Partial Class Pizza106
         'txtTop2
         '
         Me.txtTop2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtTop2.Location = New System.Drawing.Point(864, 55)
+        Me.txtTop2.Location = New System.Drawing.Point(927, 58)
         Me.txtTop2.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTop2.Name = "txtTop2"
         Me.txtTop2.ReadOnly = True
@@ -442,7 +443,7 @@ Partial Class Pizza106
         'txtTop3
         '
         Me.txtTop3.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtTop3.Location = New System.Drawing.Point(864, 82)
+        Me.txtTop3.Location = New System.Drawing.Point(927, 85)
         Me.txtTop3.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTop3.Name = "txtTop3"
         Me.txtTop3.ReadOnly = True
@@ -454,7 +455,7 @@ Partial Class Pizza106
         'txtTop4
         '
         Me.txtTop4.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtTop4.Location = New System.Drawing.Point(864, 109)
+        Me.txtTop4.Location = New System.Drawing.Point(927, 112)
         Me.txtTop4.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTop4.Name = "txtTop4"
         Me.txtTop4.ReadOnly = True
@@ -465,7 +466,7 @@ Partial Class Pizza106
         '
         'txtToppedPrice
         '
-        Me.txtToppedPrice.Location = New System.Drawing.Point(774, 162)
+        Me.txtToppedPrice.Location = New System.Drawing.Point(837, 165)
         Me.txtToppedPrice.Margin = New System.Windows.Forms.Padding(4)
         Me.txtToppedPrice.Name = "txtToppedPrice"
         Me.txtToppedPrice.ReadOnly = True
@@ -476,7 +477,7 @@ Partial Class Pizza106
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(774, 139)
+        Me.Label15.Location = New System.Drawing.Point(837, 142)
         Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(92, 17)
@@ -485,7 +486,7 @@ Partial Class Pizza106
         '
         'txtTotalPrice
         '
-        Me.txtTotalPrice.Location = New System.Drawing.Point(774, 207)
+        Me.txtTotalPrice.Location = New System.Drawing.Point(837, 210)
         Me.txtTotalPrice.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTotalPrice.Name = "txtTotalPrice"
         Me.txtTotalPrice.ReadOnly = True
@@ -496,7 +497,7 @@ Partial Class Pizza106
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(774, 188)
+        Me.Label16.Location = New System.Drawing.Point(837, 191)
         Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(75, 17)
@@ -518,7 +519,7 @@ Partial Class Pizza106
         '
         Me.CBOPFlav.FormattingEnabled = True
         Me.CBOPFlav.Items.AddRange(New Object() {"Meatlovers", "Hawaiian", "Peperoni", "Italian", "TATFTUAE"})
-        Me.CBOPFlav.Location = New System.Drawing.Point(914, 158)
+        Me.CBOPFlav.Location = New System.Drawing.Point(977, 161)
         Me.CBOPFlav.Name = "CBOPFlav"
         Me.CBOPFlav.Size = New System.Drawing.Size(121, 24)
         Me.CBOPFlav.TabIndex = 39
@@ -526,7 +527,7 @@ Partial Class Pizza106
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(914, 138)
+        Me.Label17.Location = New System.Drawing.Point(977, 141)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(93, 17)
         Me.Label17.TabIndex = 40
@@ -534,11 +535,11 @@ Partial Class Pizza106
         '
         'lsvOrders
         '
-        Me.lsvOrders.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.Order_ID, Me.First_Name, Me.Last_Name, Me.Phone, Me.Street, Me.Postcode, Me.DeliveryDateTime, Me.Base, Me.Top1, Me.Top2, Me.Top3, Me.Top4, Me.Flavour, Me.Paid})
+        Me.lsvOrders.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.Order_ID, Me.First_Name, Me.Last_Name, Me.Phone, Me.Street, Me.Suburb, Me.Postcode, Me.DeliveryDateTime, Me.Base, Me.Top1, Me.Top2, Me.Top3, Me.Top4, Me.Flavour, Me.Paid})
         Me.lsvOrders.HideSelection = False
         Me.lsvOrders.Location = New System.Drawing.Point(13, 273)
         Me.lsvOrders.Name = "lsvOrders"
-        Me.lsvOrders.Size = New System.Drawing.Size(1063, 262)
+        Me.lsvOrders.Size = New System.Drawing.Size(1093, 262)
         Me.lsvOrders.TabIndex = 41
         Me.lsvOrders.UseCompatibleStateImageBehavior = False
         Me.lsvOrders.View = System.Windows.Forms.View.Details
@@ -546,37 +547,37 @@ Partial Class Pizza106
         'Order_ID
         '
         Me.Order_ID.Text = "ID"
-        Me.Order_ID.Width = 30
+        Me.Order_ID.Width = 23
         '
         'First_Name
         '
         Me.First_Name.Text = "First Name"
-        Me.First_Name.Width = 80
+        Me.First_Name.Width = 70
         '
         'Last_Name
         '
         Me.Last_Name.Text = "Last Name"
-        Me.Last_Name.Width = 80
+        Me.Last_Name.Width = 70
         '
         'Phone
         '
         Me.Phone.Text = "Phone no."
-        Me.Phone.Width = 75
+        Me.Phone.Width = 80
         '
         'Street
         '
         Me.Street.Text = "Street"
-        Me.Street.Width = 50
+        Me.Street.Width = 70
         '
         'Postcode
         '
-        Me.Postcode.Text = "Postcode"
-        Me.Postcode.Width = 70
+        Me.Postcode.Text = "Pcode"
+        Me.Postcode.Width = 50
         '
         'DeliveryDateTime
         '
-        Me.DeliveryDateTime.Text = "Delivery Date"
-        Me.DeliveryDateTime.Width = 95
+        Me.DeliveryDateTime.Text = "D Date"
+        Me.DeliveryDateTime.Width = 130
         '
         'Base
         '
@@ -585,23 +586,23 @@ Partial Class Pizza106
         '
         'Top1
         '
-        Me.Top1.Text = "Top1"
-        Me.Top1.Width = 45
+        Me.Top1.Text = "T1"
+        Me.Top1.Width = 35
         '
         'Top2
         '
-        Me.Top2.Text = "Top2"
-        Me.Top2.Width = 45
+        Me.Top2.Text = "T2"
+        Me.Top2.Width = 35
         '
         'Top3
         '
-        Me.Top3.Text = "Top3"
-        Me.Top3.Width = 45
+        Me.Top3.Text = "T3"
+        Me.Top3.Width = 35
         '
         'Top4
         '
-        Me.Top4.Text = "Top4"
-        Me.Top4.Width = 45
+        Me.Top4.Text = "T4"
+        Me.Top4.Width = 35
         '
         'Flavour
         '
@@ -609,14 +610,18 @@ Partial Class Pizza106
         '
         'Paid
         '
-        Me.Paid.Text = "Paid"
-        Me.Paid.Width = 45
+        Me.Paid.Text = "P"
+        Me.Paid.Width = 20
+        '
+        'Suburb
+        '
+        Me.Suburb.Text = "Suburb"
         '
         'Pizza106
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1089, 547)
+        Me.ClientSize = New System.Drawing.Size(1118, 557)
         Me.Controls.Add(Me.lsvOrders)
         Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.CBOPFlav)
@@ -664,7 +669,7 @@ Partial Class Pizza106
         Me.Controls.Add(Me.txtFirstName)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Pizza106"
-        Me.Text = "v1.05 Pizza ordering app"
+        Me.Text = "v1.06 Pizza ordering app"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -730,4 +735,5 @@ Partial Class Pizza106
     Friend WithEvents Top4 As ColumnHeader
     Friend WithEvents Flavour As ColumnHeader
     Friend WithEvents Paid As ColumnHeader
+    Friend WithEvents Suburb As ColumnHeader
 End Class

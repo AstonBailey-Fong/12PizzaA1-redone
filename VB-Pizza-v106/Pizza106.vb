@@ -233,6 +233,7 @@
             lsvOrders.Items(i).SubItems.Add(students(i).top2)
             lsvOrders.Items(i).SubItems.Add(students(i).top3)
             lsvOrders.Items(i).SubItems.Add(students(i).top4)
+            lsvOrders.Items(i).SubItems.Add(students(i).Pflav)
             lsvOrders.Items(i).SubItems.Add("T")
         Next
     End Sub
