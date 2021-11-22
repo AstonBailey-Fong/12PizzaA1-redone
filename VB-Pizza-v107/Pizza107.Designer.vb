@@ -75,6 +75,7 @@ Partial Class Pizza107
         Me.Suburb = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Postcode = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.DeliveryDateTime = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Quantity = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Base = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Top1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Top2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -82,7 +83,6 @@ Partial Class Pizza107
         Me.Top4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Flavour = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Paid = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.Quantity = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.SuspendLayout()
         '
         'txtFirstName
@@ -585,6 +585,12 @@ Partial Class Pizza107
         Me.DeliveryDateTime.Text = "D Date"
         Me.DeliveryDateTime.Width = 130
         '
+        'Quantity
+        '
+        Me.Quantity.DisplayIndex = 9
+        Me.Quantity.Text = "Qty"
+        Me.Quantity.Width = 30
+        '
         'Base
         '
         Me.Base.DisplayIndex = 8
@@ -619,12 +625,6 @@ Partial Class Pizza107
         '
         Me.Paid.Text = "P"
         Me.Paid.Width = 20
-        '
-        'Quantity
-        '
-        Me.Quantity.DisplayIndex = 9
-        Me.Quantity.Text = "Qty"
-        Me.Quantity.Width = 30
         '
         'Pizza107
         '
