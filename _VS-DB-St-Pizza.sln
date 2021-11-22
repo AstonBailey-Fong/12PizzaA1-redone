@@ -59,6 +59,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VB-Pizza-v106", "VB-Pizza-v
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VB-Pizza-v107", "VB-Pizza-v107\VB-Pizza-v107.vbproj", "{80CC8821-F842-412D-9B4D-D320690C8A42}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VB-Pizza-v108", "VB-Pizza-v108\VB-Pizza-v108.vbproj", "{97D3B4EF-3BC5-4DCE-87AD-AD37EA03D245}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{80CC8821-F842-412D-9B4D-D320690C8A42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80CC8821-F842-412D-9B4D-D320690C8A42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80CC8821-F842-412D-9B4D-D320690C8A42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97D3B4EF-3BC5-4DCE-87AD-AD37EA03D245}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97D3B4EF-3BC5-4DCE-87AD-AD37EA03D245}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97D3B4EF-3BC5-4DCE-87AD-AD37EA03D245}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97D3B4EF-3BC5-4DCE-87AD-AD37EA03D245}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
