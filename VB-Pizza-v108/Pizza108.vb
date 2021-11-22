@@ -172,6 +172,11 @@
             CBOPFlav.Focus()
             Exit Sub
         End If
+        If chkPaid.Checked = False Then
+            MsgBox("A pizza cannot be ordered without being paid for", MsgBoxStyle.Exclamation, "Paid Check")
+            chkPaid.Focus()
+            Exit Sub
+        End If
         ' Use a SELECT structure to pick out selected crust type
         ' This works because we know only one radio button can be
         ' selected at once. Consider making one of them selected
